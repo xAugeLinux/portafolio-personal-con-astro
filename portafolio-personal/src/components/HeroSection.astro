@@ -1,9 +1,10 @@
 ---
 import { Fragment } from "astro/jsx-runtime";
 import { siteConfig } from '../config/site';
+import "../styles/hero.css";
 ---
 
-<section class="hero-section">
+<section class="hero-section" id="zero">
     <div class="hero-content">
         <h1 class="hero-title">{siteConfig.hero.title}</h1>
         <p class="hero-subtitle">{siteConfig.hero.subtitle}</p>

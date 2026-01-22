@@ -1,30 +1,31 @@
 ---
 import { Astro } from 'astro';
 import { siteConfig } from '../config/site';
+import "../styles/nav.css";
 
 const currentPath = Astro.url.pathname;
 ---
 
 <nav>
-  <a href="/" class="site-name">{siteConfig.title}</a>
+  <a href="#zero" class="site-name">{siteConfig.title}</a>
   <ul>
     <li>
-      <a href="/" class={`menu-link ${currentPath === '/' ? 'active' : ''}`}>
+      <a href="#zero" class={`menu-link ${currentPath === '/' ? 'active' : ''}`}>
         {siteConfig.navigation.home}
       </a>
     </li>
     <li>
-      <a href="/about" class={`menu-link ${currentPath === '/about' ? 'active' : ''}`}>
+      <a href="#one" class={`menu-link ${currentPath === '/about' ? 'active' : ''}`}>
         {siteConfig.navigation.about}
       </a>
     </li>
     <li>
-      <a href="/projects" class={`menu-link ${currentPath === '/projects' ? 'active' : ''}`}>
+      <a href="#two" class={`menu-link ${currentPath === '/projects' ? 'active' : ''}`}>
         {siteConfig.navigation.projects}
       </a>
     </li>
     <li>
-      <a href="/contact" class={`menu-link ${currentPath === '/contact' ? 'active' : ''}`}>
+      <a href="#three" class={`menu-link ${currentPath === '/contact' ? 'active' : ''}`}>
         {siteConfig.navigation.contact}
       </a>
     </li>

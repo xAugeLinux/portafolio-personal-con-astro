@@ -1,0 +1,101 @@
+/* ProjectsSection */
+.project-section{
+  width: min(1080px, calc(100% - 2.5rem));
+  margin: 2.2rem auto;
+  padding: 2.2rem;
+
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.project-title{
+  color: var(--text-strong);
+  margin-bottom: 1.2rem;
+}
+
+.project-list{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-item{
+  position: relative;
+  padding: 1.2rem;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.10);
+
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+  overflow: hidden;
+}
+
+.project-item::before{
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at 30% 20%, rgba(138,124,255,.22), transparent 55%),
+              radial-gradient(circle at 80% 60%, rgba(47,227,208,.16), transparent 55%);
+  filter: blur(10px);
+  opacity: .75;
+  pointer-events: none;
+}
+
+.project-item:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.18);
+}
+
+.project-name{
+  position: relative;
+  margin: 0 0 .5rem;
+  color: rgba(255,255,255,.95);
+  letter-spacing: .2px;
+}
+
+.project-description{
+  position: relative;
+  margin: 0 0 1rem;
+  color: rgba(255,255,255,.70);
+  line-height: 1.55;
+}
+
+/* Link estilo botón */
+.project-link{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+
+  padding: .75rem 1rem;
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.18);
+  color: rgba(255,255,255,.92);
+  font-weight: 650;
+
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.project-link:hover{
+  transform: translateY(-1px);
+  background: rgba(138,124,255,.14);
+  border-color: rgba(138,124,255,.35);
+}
+
+@media (max-width: 860px){
+  .project-section{
+    padding: 1.4rem;
+    margin: 1.2rem auto;
+  }
+  .project-list{
+    grid-template-columns: 1fr;
+  }
+}

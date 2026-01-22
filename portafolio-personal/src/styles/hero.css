@@ -1,0 +1,87 @@
+/* HeroSection */
+.hero-section{
+  width: min(1080px, calc(100% - 2.5rem));
+  margin: 2.2rem auto;
+  padding: 3rem 2.6rem;
+
+  position: relative;
+  overflow: hidden;
+
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+/* Glow/aurora similar a Hyperspace */
+.hero-section::before{
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(138,124,255,.28), transparent 55%),
+    radial-gradient(circle at 85% 35%, rgba(47,227,208,.18), transparent 55%),
+    radial-gradient(circle at 50% 90%, rgba(255,255,255,.10), transparent 60%);
+  filter: blur(12px);
+  opacity: .9;
+  pointer-events: none;
+}
+
+.hero-section::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,.0), rgba(0,0,0,.18));
+  pointer-events: none;
+}
+
+.hero-content{
+  position: relative;
+  z-index: 1;
+  max-width: 70ch;
+}
+
+.hero-title{
+  margin: 0 0 .9rem;
+  color: rgba(255,255,255,.96);
+  letter-spacing: .4px;
+  line-height: 1.05;
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+}
+
+/* “subtítulo” con acento */
+.hero-subtitle{
+  margin: 0 0 .7rem;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,.86);
+}
+
+.hero-subtitle::before{
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  margin-right: .55rem;
+  vertical-align: -1px;
+
+  background: rgba(47,227,208,.95);
+  box-shadow: 0 0 0 6px rgba(47,227,208,.12);
+}
+
+/* texto intro más suave */
+.hero-intro{
+  margin: 0;
+  color: rgba(255,255,255,.68);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 860px){
+  .hero-section{
+    padding: 2rem 1.4rem;
+    margin: 1.2rem auto;
+  }
+}

@@ -1,0 +1,120 @@
+/* ---------- Base / Reset ---------- */
+:root{
+  --bg-0: #241133;       /* morado oscuro */
+  --bg-1: #2a1b4a;       /* morado */
+  --bg-2: #0b2b54;       /* azul */
+  --text: rgba(255,255,255,.85);
+  --text-strong: rgba(255,255,255,.95);
+  --muted: rgba(255,255,255,.6);
+
+  --card: rgba(255,255,255,.06);
+  --card-border: rgba(255,255,255,.12);
+
+  --accent: #8a7cff;     /* acento lila */
+  --accent-2: #2fe3d0;   /* acento aqua */
+
+  --radius: 18px;
+  --shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin: 0;
+  min-height: 100dvh;
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  line-height: 1.6;
+
+  /* Fondo */
+  background:
+    radial-gradient(1200px 800px at 15% 20%, rgba(138,124,255,.35), transparent 60%),
+    radial-gradient(900px 600px at 85% 25%, rgba(47,227,208,.25), transparent 55%),
+    radial-gradient(1000px 700px at 50% 100%, rgba(11,43,84,.45), transparent 60%),
+    linear-gradient(135deg, var(--bg-0), var(--bg-1) 40%, var(--bg-2));
+}
+
+/* Tipografía */
+h1,h2,h3{
+  margin: 0 0 .6rem;
+  color: var(--text-strong);
+  letter-spacing: .3px;
+}
+h1{ font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; }
+h2{ font-size: clamp(1.5rem, 3vw, 2.2rem); }
+p{ margin: 0 0 1rem; color: var(--text); }
+a{ color: inherit; text-decoration: none; }
+
+/* ---------- Layout general ---------- */
+main, section{
+  width: min(1080px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+/* Separación entre secciones */
+section{
+  margin-block: 2.2rem;
+  padding: 2.2rem;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+/* ---------- Diseño de Botones ---------- */
+.button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+
+  padding: .9rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.07);
+  color: var(--text-strong);
+
+  font-weight: 600;
+  letter-spacing: .2px;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.button:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.35);
+}
+
+.button:active{ transform: translateY(0); }
+
+.scrolly{}
+
+/* ---------- Botones "Leer más"  ---------- */
+.cta-list{
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto 0;
+  width: min(1080px, calc(100% - 2.5rem));
+  display: flex;
+  justify-content: flex-start;
+}
+.cta-list li{ margin: 0; }
+
+
+/* ---------- Ajustes responsive ---------- */
+@media (max-width: 640px){
+  section{
+    padding: 1.4rem;
+    margin-block: 1.2rem;
+  }
+  ul{ justify-content: center; }
+}
+
+@media (max-width: 480px){
+  .about-image-wrap{
+    grid-column: 1;
+    justify-self: center;
+    margin-top: .5rem;
+  }
+}

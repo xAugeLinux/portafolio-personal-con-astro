@@ -79,7 +79,7 @@ export const siteConfig = {
 
     socialmedia: {
       links: [
-        { name: "GitHub", icon: "/svg/github.svg", url: "https://github.com/jose" },
+        { name: "GitHub", icon: "/svg/github.svg", url: "https://github.com/xAugeLinux" },
         { name: "LinkedIn", icon: "/svg/linkedin.svg", url: "https://linkedin.com/in/jose" },
         { name: "Twitter", icon: "/svg/twitter.svg", url: "https://twitter.com/jose" },
       ],

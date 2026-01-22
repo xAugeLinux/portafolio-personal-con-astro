@@ -1,0 +1,85 @@
+/* ContactSection */
+.contact-section{
+  width: min(1080px, calc(100% - 2.5rem));
+  margin: 2.2rem auto;
+  padding: 2.2rem;
+
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.contact-title{
+  color: var(--text-strong);
+  margin-bottom: .5rem;
+  letter-spacing: .3px;
+}
+
+.contact-description{
+  color: var(--muted);
+  margin-bottom: 1.6rem;
+  max-width: 68ch;
+}
+
+.contact-info{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-item{
+  padding: 1.1rem;
+  border-radius: 16px;
+
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+
+.contact-item:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.18);
+}
+
+.contact-item h3{
+  margin: 0 0 .7rem;
+  font-size: .95rem;
+  color: rgba(255,255,255,.88);
+  letter-spacing: .2px;
+}
+
+.contact-item input{
+  width: 100%;
+  padding: .9rem 1rem;
+  border-radius: 14px;
+
+  color: rgba(255,255,255,.92);
+  background: rgba(0,0,0,.18);
+  border: 1px solid rgba(255,255,255,.14);
+
+  outline: none;
+}
+
+.contact-item input:focus{
+  border-color: rgba(138,124,255,.55);
+  box-shadow: 0 0 0 6px rgba(138,124,255,.14);
+}
+
+/* Si los inputs son solo para mostrar info, esto mejora la UX */
+.contact-item input[readonly]{
+  cursor: default;
+  opacity: .95;
+}
+
+@media (max-width: 860px){
+  .contact-section{
+    padding: 1.4rem;
+    margin: 1.2rem auto;
+  }
+  .contact-info{
+    grid-template-columns: 1fr;
+  }
+}

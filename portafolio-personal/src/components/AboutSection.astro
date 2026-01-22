@@ -1,17 +1,28 @@
 ---
 import { siteConfig } from "../config/site";
+import "../styles/about.css";
 ---
 
 <section class="about-section" id="one">
   <div class="about-content">
     <h2 class="about-title">{siteConfig.about.title}</h2>
     <p class="about-description">{siteConfig.about.description}</p>
+
     <h3 class="about-skills-title">Habilidades:</h3>
     <ul class="about-skills-list">
       {siteConfig.about.skills.map((skill) => (
         <li class="about-skill-item">{skill}</li>
       ))}
     </ul>
-    <img src={siteConfig.about.image} alt="Imagen de José" class="about-image" />
+
+    <div class="about-image-wrap">
+      <img
+        src={siteConfig.about.image}
+        alt="Imagen de José"
+        class="about-image"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
   </div>
 </section>
