@@ -1,5 +1,10 @@
 ---
-
+import Navigation from "../components/Navigation.astro"
+import HeroSection from "../components/HeroSection.astro"
+import AboutSection from "../components/AboutSection.astro"
+import ProjectSection from "../components/ProjectSection.astro"
+import ContactSection from "../components/ContactSection.astro"
+import Footer from "../components/Footer.astro"
 ---
 
 <html lang="en">
@@ -11,6 +16,20 @@
 		<title>Portafolio Personal</title>
 	</head>
 	<body>
-		<h1>Portafolio Personal</h1>
+		<Navigation />
+		<HeroSection />
+		<ul>
+			<li><a href="#one" class="button scrolly">Leer más</a></li>
+		</ul>
+		<AboutSection />
+		<ul>
+			<li><a href="#two" class="button scrolly">Leer más</a></li>
+		</ul>
+		<ProjectSection />
+		<ul>
+			<li><a href="#three" class="button scrolly">Leer más</a></li>
+		</ul>
+		<ContactSection />
+		<Footer />
 	</body>
 </html>

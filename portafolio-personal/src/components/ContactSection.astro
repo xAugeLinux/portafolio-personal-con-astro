@@ -1,0 +1,20 @@
+---
+import { siteConfig } from "../config/site";
+---
+
+<section class="contact-section" id="three">
+  <div class="contact-content">
+    <h2 class="contact-title">{siteConfig.contact.title}</h2>
+    <p class="contact-description">{siteConfig.contact.description}</p>
+    <div class="contact-info">
+      <div class="contact-item">
+        <h3>{siteConfig.contact.info.email.label}</h3>
+        <input type="email" value={siteConfig.contact.info.email.value} />
+      </div>
+      <div class="contact-item">
+        <h3>{siteConfig.contact.info.phone.label}</h3>
+        <input type="tel" value={siteConfig.contact.info.phone.value} />
+      </div>
+    </div>
+  </div>
+</section>

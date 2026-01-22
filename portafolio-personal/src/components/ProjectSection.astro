@@ -1,0 +1,18 @@
+---
+import { siteConfig } from "../config/site";
+---
+
+<section class="project-section" id="two">
+  <div class="project-content">
+    <h2 class="project-title">{siteConfig.projects.title}</h2>
+    <div class="project-list">
+      {siteConfig.projects.items.map((project) => (
+        <div class="project-item">
+          <h3 class="project-name">{project.name}</h3>
+          <p class="project-description">{project.description}</p>
+          <a href={project.link} class="project-link" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+---
+import { siteConfig } from "../config/site";
+---
+
+<footer class="footer">
+  <div class="social-media">
+      {siteConfig.contact.socialmedia.links.map((link) => (
+        <a href={link.url} target="_blank" rel="noopener noreferrer">
+          {link.name}
+        </a>
+      ))}
+    </div>
+  </div>
+</footer>
